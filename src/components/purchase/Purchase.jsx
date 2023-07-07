@@ -1,13 +1,9 @@
 import axios from 'axios';
 import classes from './Purchase.module.scss'
-import { useState } from 'react';
+
 
 const Purchase = (props) => {
 
-    // const increaseQuantity = props.increaseQuantity
-    // const decreaseQuantity = props.decreaseQuantity
-
-    console.log(props)
     const id = props.id
     const handleUpdateToCart = props.handleUpdateToCart  
     const handleDowndateToCart = props.handleDowndateToCart
@@ -20,12 +16,10 @@ const Purchase = (props) => {
       } catch (error) {
         console.error(error);
       }
+      document.location.reload()
     };
 
 
-
-
-    // const [basket, setBasket] = useState([]);
 
     const formatNumber = (number) => {
         const numberString = number.toString();
@@ -39,8 +33,6 @@ const Purchase = (props) => {
         return parts.join(' ');
       };
 
-      // console.log('ID', props)
-
     return(
         <div className={classes.container}>
             <div className={classes.cardImage}>
@@ -52,12 +44,15 @@ const Purchase = (props) => {
                 <span>{formatNumber(props.price)} руб.</span>
                 <button onClick={handleRemoveItem}>УДалить</button>
             </div>
-            <button onClick={handleRemoveItem}>delete</button>
+            <div className={classes.current}>
+            <span>{props.quantity}</span>
+            <span>
             <button onClick={() => handleDowndateToCart(props)}>-</button>
-            {/* <button onClick={() => increaseQuantity(props.id)}>+</button> */}
-            {props.quantity}
-          {/* <button onClick={() => decreaseQuantity(props.id)}>-</button> */}
-          <button type='submit' onClick={() => handleUpdateToCart(props)}>+</button>
+            <button type='submit' onClick={() => handleUpdateToCart(props)}>+</button>
+            </span>
+            
+            </div>
+            
         </div>
     )
 }

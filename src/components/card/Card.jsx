@@ -102,19 +102,7 @@ const handleAddToCart = () => {
       props.image,
       quantity
       );
-    }
-
-
-
-
-
-
-
-
-
-
-    
-      
+    }   
   };
 
   const formatNumber = (number) => {

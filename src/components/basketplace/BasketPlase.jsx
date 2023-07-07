@@ -7,12 +7,7 @@ import { Link } from "react-router-dom";
 
 const BasketPlase = () => {
 
-  // const basketUrl = 'http://localhost:3000/basket'
-
-  // const basketId = `http://localhost:3000/basket/${id}`
-
     const [products, setProducts] = useState([]);
-    const [basket, setBasket] = useState([]);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -159,7 +154,7 @@ const updateToCart = (
    const title = data.title
    const description = data.description
    const image = data.image
-   const price = data.price
+   const price = data.price+data.price
    const quantity = data.quantity+1
   fetch(`http://localhost:3000/basket/${id}`, {
     method: 'PUT',
@@ -190,10 +185,12 @@ const updateToCart = (
 
 const handleUpdateToCart = (data) => {
   updateToCart(data);  
+  document.location.reload()
 };
 
 const handleDowndateToCart = (data) => {
   downdateToCart(data)
+  document.location.reload()
 }
 
 
@@ -221,11 +218,8 @@ const total = products
                       description={x.description}
                       image={x.image}
                       quantity={x.quantity}
-                      // increaseQuantity={increaseQuantity}
-                      // decreaseQuantity={decreaseQuantity}
                       handleUpdateToCart={handleUpdateToCart}
                       handleDowndateToCart={handleDowndateToCart}
-                      // item={item} 
                       onRemoveItem={removeItemFromBasket} 
                     />))
                 }

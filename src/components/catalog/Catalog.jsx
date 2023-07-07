@@ -5,8 +5,6 @@ import classes from "./Catalog.module.scss";
 
 const Catalog = () => {
   const [products, setProducts] = useState([]);
-//   const [currentEndpoint, setCurrentEndpoint] = useState("urlZA");
-//   const [isDataLoaded, setIsDataLoaded] = useState(false);
   const [selectedEndpoint, setSelectedEndpoint] = useState('http://localhost:3000/items');
 
   const url = "http://localhost:3000/items";

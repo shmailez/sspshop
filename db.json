@@ -48,25 +48,9 @@
       "id": 2,
       "title": "Кресло VILORA",
       "description": "Мягкое и уютное, аккуратное и стильное. Упругие подушки сиденья и приятная на ощупь ткань. ",
-      "price": 21000,
+      "price": 168000,
       "image": "https://imageup.ru/img235/4414032/vilora.jpg",
-      "quantity": 1
-    },
-    {
-      "id": 1,
-      "title": "Кровать TATRAN",
-      "description": "Основание из полированной нержавеющей стали, придает оригинальный парящий эффект.",
-      "price": 120000,
-      "image": "https://imageup.ru/img85/4414031/tatran.jpg",
-      "quantity": 1
-    },
-    {
-      "id": 3,
-      "title": "Стол MENU",
-      "description": "Европейский дуб - отличается особой прочностью и стабильностью.",
-      "price": 34000,
-      "image": "https://imageup.ru/img234/4414027/menu.jpg",
-      "quantity": 1
+      "quantity": 4
     }
   ]
 }

@@ -4,11 +4,6 @@
     width: 100%;
     // background-color: rgb(207, 207, 207);
     margin: 10px 0;
-
-    button {
-        background-color: aqua;
-        height: 20px;
-    }
 }
 
 
@@ -35,10 +30,6 @@
     align-items: start;
 
     span {
-        // position: absolute;
-        // bottom: 0;
-        // left: 15px;
-        // margin-bottom: 10px;
         margin-left: 15px;
     }
 
@@ -46,20 +37,32 @@
         background-color: inherit;
         margin-left: 15px;
     }
+
+    h3 {
+        margin: 0 15px;
+    }
+
+    p {
+        margin: 0 15px;
+        max-width: 250px;
+    }
 }
 
-.cardInfo h3 {
-    margin: 0 15px;
+.current {
+    display: flex;
+    height: 50px;
+    align-items: center;
+
+    span {
+        display: flex;
+        flex-direction: column;
+    }
+
+    button {
+        border: none;
+    }
 }
 
-.cardInfo p {
-    margin: 0 15px;
-    max-width: 250px;
-}
+// .cardInfo 
 
-// .cardInfo span {
-//     position: absolute;
-//     bottom: 0;
-//     left: 15px;
-//     // margin-bottom: 10px;
-// }
+// .cardInfo 
